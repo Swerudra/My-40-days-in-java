@@ -1,0 +1,12 @@
+package test;
+
+public class Maximum_Handshakes {
+
+	public static void main(String[] args) {
+		int n = 5;
+		int m = ((n)*n-1)/2;
+		System.out.println("For "+n+" people occurs "+m+" Handshakes.");
+
+	}
+
+}
