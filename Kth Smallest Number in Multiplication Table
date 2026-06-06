@@ -1,0 +1,98 @@
+import java.util.*;
+
+public class Main {
+
+    public static int findKthNumber(int m, int n, int k) {
+        int low = 1, high = m * n;
+
+        while (low < high) {
+            int mid = low + (high - low) / 2;
+
+            int count = 0;
+            for (int i = 1; i <= m; i++) {
+                count += Math.min(mid / i, n);
+            }
+
+            if (count < k)
+                low = mid + 1;
+            else
+                high = mid;
+        }
+
+        return low;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int m = sc.nextInt();
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+
+        System.out.println(findKthNumber(m, n, k));
+
+        sc.close();
+    }
+} 
+
+/* 
+Input: m = 3 n = 3 k = 5 Output: 3
+
+×	1	2	3
+1	1	2	3
+2	2	4	6
+3	3	6	9
+
+The numbers in the table are:
+
+1, 2, 3
+2, 4, 6
+3, 6, 9
+
+Now arrange all numbers in sorted order:
+
+1, 2, 2, 3, 3, 4, 6, 6, 9
+
+Suppose k = 5.
+
+Count the numbers:
+
+1st → 1
+2nd → 2
+3rd → 2
+4th → 3
+5th → 3
+
+So the 5th smallest number is 3.
+
+Output = 3
+
+Another Example
+
+m = 2, n = 3
+
+Multiplication table:
+
+×	1	2	3
+1	1	2	3
+2	2	4	6
+
+Sorted numbers:
+
+1, 2, 2, 3, 4, 6
+
+If k = 6:
+
+1st → 1
+2nd → 2
+3rd → 2
+4th → 3
+5th → 4
+6th → 6
+
+So the answer is:
+
+6
+*/
+
+
