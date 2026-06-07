@@ -1,0 +1,38 @@
+public class String {
+
+	public static void main(java.lang.String[] args) {
+		java.lang.String s ="Programming";
+		int len = s.length();
+		System.out.println(s);
+		System.out.println(len);
+		System.out.println(s.toUpperCase());
+		System.out.println(s.toLowerCase());
+		System.out.println(s.substring(0,7));
+		System.out.println(s.replace('m','l'));
+		System.out.println(s.trim());
+		System.out.println(s.startsWith("Pro"));
+		System.out.println(s.endsWith("ing"));
+		System.out.println(s.charAt(5));
+		System.out.println(s.indexOf('r'));
+		
+	
+		java.lang.String s1 = "   Hello World   ";
+        java.lang.String result = s1.trim();
+        System.out.println("Before trim: '" + s1 + "'");
+        System.out.println("After trim: '" + result + "'");
+        
+        System.out.println(s.equals(s1));
+        System.out.println(s.concat(s1));
+        
+        java.lang.String res = s.replaceAll("[aeiouAEIOU]", "");
+        System.out.println(res);
+        for(int i=0;i<s.length();i++) {
+        	char ch = s.charAt(i);
+        	if(ch!='a' && ch !='e') {
+        		result = result + ch;
+        	}
+        }
+        System.out.println(result);
+	}
+
+}
