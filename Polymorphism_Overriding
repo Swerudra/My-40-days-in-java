@@ -1,0 +1,21 @@
+
+public class Polymorphism_Overriding {
+
+    static class Animals {
+        void Sound() {
+            System.out.println("Animal Sounds");
+        }
+    }
+
+    static class Dog extends Animals {
+        @Override
+        void Sound() {
+            System.out.println("Dog Sounds");
+        }
+    }
+
+    public static void main(String[] args) {
+        Animals d = new Dog();
+        d.Sound();
+    }
+}
