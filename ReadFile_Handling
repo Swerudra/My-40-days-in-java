@@ -1,0 +1,25 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+public class File_Exception {
+
+	public static void main(String[] args) {
+		try {
+			FileReader fr = new FileReader("output_exp.txt");
+      // file has Hey
+			int c = fr.read(); // reads as a character
+			System.out.print((char)c);
+			//System.out.println(c);
+			int d = fr.read();
+			System.out.print((char)d);
+			int e = fr.read();
+			System.out.print((char)e);
+			
+			fr.close();
+		}
+		catch(Exception e) {
+			System.out.println("Failed");
+		}
+
+	}
+
+}
