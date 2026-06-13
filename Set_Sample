@@ -1,0 +1,33 @@
+import java.util.*;
+public class Set_Sample {
+
+	public static void main(String[] args) {
+		HashSet<String> h = new HashSet<>();
+		
+		
+		h.add("Bob");
+		h.add("Charle");
+		h.add("Alice");
+		h.add("Bob");
+		h.add("David");
+		System.out.println(h);
+		
+		LinkedHashSet<String> l = new LinkedHashSet<>();
+		
+		l.add("Bob");
+		l.add("Charle");
+		l.add("Alice");
+		l.add("Bob");
+		l.add("David");
+		System.out.println(l);
+		
+		TreeSet<String> t = new TreeSet<>();
+		t.add("Bob");
+		t.add("Charle");
+		t.add("Alice");
+		t.add("Bob");
+		t.add("David");
+		System.out.println(t);
+	}
+
+}
