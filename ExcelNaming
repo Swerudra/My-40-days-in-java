@@ -1,0 +1,30 @@
+public class ExcelLikeNaming {
+
+	public static void main(String[] args) {
+		 int n = 53;   // change number here
+	        String result = "";
+
+	        while (n > 0) {
+	            int rem = (n - 1) % 26;   // find position
+	            result = (char) ('A' + rem) + result;
+	            n = (n - 1) / 26;         // reduce number
+	        }
+
+	        System.out.println(result);
+	        
+	     //   1 - A 26 - Z BA - 53 AA - 27
+	        
+
+	        convert(12);
+
+	}
+	static void convert(int n) {
+        if (n == 0)
+            return;
+
+        n--;
+        convert(n / 26);
+        System.out.print((char) ('A' + (n % 26)));
+    }
+
+}
