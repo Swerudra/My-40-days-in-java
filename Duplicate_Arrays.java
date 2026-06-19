@@ -1,4 +1,3 @@
-package _40days;
 
 public class Dup_Array {
 
