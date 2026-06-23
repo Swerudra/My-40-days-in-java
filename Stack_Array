@@ -1,0 +1,42 @@
+
+
+public class Stack_Array {
+	static final int Max_Size = 30;
+	int arr[] = new int[Max_Size];
+	int top;
+	
+	Stack_Array() {
+		top = -1;
+	}
+	void push(int val) {
+		if(top == Max_Size-1) {
+			throw new IndexOutOfBoundsException("Stack is Full");
+		}
+		arr[++top] = val;
+	}
+	public int pop() {
+		if(top == Max_Size-1) {
+			throw new IndexOutOfBoundsException("Stack is Empty");
+		}
+		return arr[top--];
+	}
+	int peek() {
+		return arr[top];
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		Stack_Array s = new Stack_Array();
+		s.push(20);
+		s.push(25);
+		s.push(30);
+		s.push(35);
+		s.push(45);
+		System.out.println("Popped: " + s.pop());
+		s.peek();
+		
+
+	}
+
+}
